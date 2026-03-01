@@ -1,0 +1,8 @@
+<!-- Listado Pro -->
+<a href="{% url 'crear' %}">Nuevo Producto</a>
+{% for p in productos %}
+    <h3>{{ p.nombre }}</h3>
+    <img src="{{ p.imagen.url }}" width="100">
+    <a href="{% url 'editar' p.id %}">Editar</a>
+    <a href="{% url 'eliminar' p.id %}">Eliminar</a>
+{% endfor %}
